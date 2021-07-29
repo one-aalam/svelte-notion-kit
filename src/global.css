@@ -1,0 +1,25 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* purge start ignore */
+@layer base {
+    body {
+        @apply antialiased text-gray-900 leading-normal tracking-normal break-words font-sans lg:text-xl;
+    }
+
+    main {
+        @apply container;
+    }
+
+    a {
+        @apply text-green-600 no-underline hover:underline focus:outline-none focus:underline;
+    }
+
+    button {
+        @apply py-1 px-4 my-2 rounded border border-gray-500 cursor-pointer focus:outline-none;
+    }
+}
+
+  /* purge end ignore */
