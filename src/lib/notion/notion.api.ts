@@ -1,5 +1,5 @@
 import { Client } from '@notionhq/client'
-import { appConfig } from '$lib/config'
+import { appConfig } from '$lib/config.server'
 
 const { token, databaseId: notionDatabaseId } = appConfig.notion
 
