@@ -22,6 +22,6 @@
         @apply flex text-sm;
     }
     img {
-        @apply w-8 h-8 rounded-full ring-1 ring-gray-300;
+        @apply w-8 h-8 rounded-md ring-1 ring-gray-300;
     }
 </style>
