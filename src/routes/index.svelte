@@ -34,22 +34,14 @@
 </script>
 
 <SvelteSeo
-  title="Svelte Starter Kit"
-  description="Svelte with brilliant bells and useful whistles"
+  title="Svelte Notion Kit"
+  description="Brings your Notion pages to SvelteKit"
 />
-
-<div>
+<section class="">
     {#each result.result as notionItem}
         <PostPreview id={notionItem.id} props={notionItem.properties} />
     {/each}
-	<p>
-		Visit <a class="text-blue-600 underline" href="https://svelte.dev">svelte.dev</a> to learn how to
-		build Svelte apps.
-	</p>
-</div>
+</section>
 
 <style style lang="postcss">
-    .post-preview {
-        @apply mb-8;
-    }
 </style>

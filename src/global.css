@@ -14,7 +14,7 @@
     }
 
     a {
-        @apply text-green-600 no-underline hover:underline focus:outline-none focus:underline;
+        @apply text-gray-700 no-underline hover:text-gray-900 hover:bg-yellow-500 hover:underline focus:outline-none focus:underline;
     }
 
     button {

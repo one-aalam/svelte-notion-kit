@@ -3,7 +3,7 @@
 
     export async function load({ page: { params } }) {
         const { id } = params
-        const res = await fetch(`http://localhost:3001/blog/${id}.json`)
+        const res = await fetch(`/blog/${id}.json`)
         if(res.ok) {
             return {
                 props: {
@@ -32,13 +32,9 @@
   description="Svelte with brilliant bells and useful whistles"
 />
 
-<div>
-        <Post props={result.result} />
-	<p>
-		Visit <a class="text-blue-600 underline" href="https://svelte.dev">svelte.dev</a> to learn how to
-		build Svelte apps.
-	</p>
-</div>
+<section>
+    <Post props={result.result} />
+</section>
 
 <style style lang="postcss">
 
