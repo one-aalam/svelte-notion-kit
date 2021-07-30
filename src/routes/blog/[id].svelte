@@ -1,10 +1,9 @@
 <script lang="ts" context="module">
     import type{ Block } from '$lib/notion'
-    import { appConfig } from '$lib/config'
 
     export async function load({ page: { params } }) {
         const { id } = params
-        const res = await fetch(`${appConfig.baseUrl}/blog/${id}.json`)
+        const res = await fetch(`/blog/${id}.json`)
         if(res.ok) {
             return {
                 props: {
