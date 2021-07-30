@@ -6,3 +6,4 @@ node_modules
 .svelte-kit
 .env.local
 .env
+.vercel_build_output

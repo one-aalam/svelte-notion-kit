@@ -1,5 +1,7 @@
-import sveltePreprocess from 'svelte-preprocess';
-import node from '@sveltejs/adapter-node';
+import sveltePreprocess from 'svelte-preprocess'
+import vercel from '@sveltejs/adapter-vercel';
+// import node from '@sveltejs/adapter-node'
+// import adapterStatic from '@sveltejs/adapter-static'
 
 /** @type {import('@sveltejs/kit').Config} */
 export default {
@@ -17,14 +19,14 @@ export default {
 		// By default, `npm run build` will create a standard Node app.
 		// You can create optimized builds for different platforms by
 		// specifying a different adapter
-		adapter: node(),
+        adapter: vercel(),
+		// adapter: adapterStatic({
+        //     pages: 'build',
+        //     assets: 'build',
+        //     fallback: null
+        // }),
 
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
-
-		vite: {
-			ssr: {
-			}
-		}
 	}
 };

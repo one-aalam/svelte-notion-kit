@@ -104,10 +104,17 @@
     esbuild "^0.12.5"
     tiny-glob "^0.2.9"
 
-"@sveltejs/adapter-static@^1.0.0-next.0":
-  version "1.0.0-next.0"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.0.tgz#558c3339259edd001b82bb8a978846dce53d3b7c"
-  integrity sha512-5QYrPSjfqI/Jd2av/WuwhZjRZHaWu8tGmBHM6dh5W7cd4s0PG3eW0p4eASZESHmtCFWGG00PYMRjUUFPPtEcOg==
+"@sveltejs/adapter-static@^1.0.0-next.13":
+  version "1.0.0-next.13"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.13.tgz#5cba8f2905a5a7b956c2663d73ac02f7eb6da7c4"
+  integrity sha512-zaXJlWK9JfrjrE6nG5etB8kf4DSkbE3H8Ql6gmCk3WjdvpY85a60TMYBU9OK2iunkqpHnPYiMUGEnOGYmWlLYA==
+
+"@sveltejs/adapter-vercel@^1.0.0-next.26":
+  version "1.0.0-next.26"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.26.tgz#3682ae914d8584061a8fc5ef151bec7d67b7834d"
+  integrity sha512-t1/Gl9GF62HV99VOmI0clguuSHdJvGD2t8/y7tv9N55tLAHWk4yRV/UOilBQhX+KKjCkPn40Oln2jTXPhlr/lA==
+  dependencies:
+    esbuild "^0.12.5"
 
 "@sveltejs/kit@^1.0.0-next.137":
   version "1.0.0-next.137"
