@@ -1,9 +1,7 @@
 # Svelte Notion Kit
-<img src="./static/svelte-starter-kit.png" title="Svelte Notion Kit" />
 
 Boilerplate to quckly get up and running with Svelte and Notion, with
 
-This branch has
 - __Typescript__ as the language choice
 - __Tailwind CSS__ for quick styling without getting out of your HTML
 - __ESLint__ for static code analysis
@@ -11,45 +9,21 @@ This branch has
 - __SEO__ pre-configured
 - __Icons__ support out of the box
 
-# create-svelte
+## How to configure Notion?
+- Retrieve a `NOTION_TOKEN` by following their [Getting Started guide](https://developers.notion.com/docs/getting-started)
+- Create a table as the database of your content, and copy its `id`. Maintain it as `NOTION_DATABASE_ID`
+- Add following columns as a post attribute
+    - `title` (title) - For post title
+    - `summary` (text) - For post summary
+    - `tags` (multi-select) - For post tags
+    - `author` (person) - For post's Author
+    - `published` (checkbox) - Published? (un-used currently)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+<img src="./static/structure.png" alt="" />
+This will setup your Notion table, as the table for your SvelteKit + Notion blog. Congrats!
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Svelte apps are built with _adapters_, which optimise your project for deployment to different environments.
-
-By default, `npm run build` will generate a Node app that you can run with `node build`. To use a different adapter, add it to the `devDependencies` in `package.json` making sure to specify the version as `next` and update your `svelte.config.cjs` to [specify your chosen adapter](https://kit.svelte.dev/docs#configuration-adapter). The following official adapters are available:
-
-- [@sveltejs/adapter-node](https://github.com/sveltejs/kit/tree/master/packages/adapter-node)
-- [@sveltejs/adapter-static](https://github.com/sveltejs/kit/tree/master/packages/adapter-static)
-- [@sveltejs/adapter-netlify](https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify)
-- [@sveltejs/adapter-vercel](https://github.com/sveltejs/kit/tree/master/packages/adapter-vercel)
-- ...more soon
-
-[See the adapter documentation for more detail](https://kit.svelte.dev/docs#adapters)
+## How to configure the SvelteKit App?
+- The `NOTION_TOKEN` and `NOTION_DATABASE_ID` is expected to be available in your Vercel/Netlify account as environment variables. Add them, fork the project and deploy on Vercel.
+- The project uses the [@sveltejs/adapter-vercel](https://github.com/sveltejs/kit/tree/master/packages/adapter-vercel) by default. If you want to deploy on Netlify, install [@sveltejs/adapter-netlify](https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify) and change the `adpater` key in `svelte.config.js` to `netlify()
+- __Your local instance expects `VITE_` prefixed with the aforementioned environment variables to run.__ Refer `.env.example` for help.
